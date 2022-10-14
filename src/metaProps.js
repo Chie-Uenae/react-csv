@@ -1,28 +1,38 @@
 import React from 'react';
-import { string, array, oneOfType, bool, func } from 'prop-types';
-
+import { string, array, oneOfType, bool, func, arrayOf,shape } from 'prop-types';
 
 export const propTypes = {
-  data: oneOfType([string, array, func]).isRequired,
-  headers: array,
-  target: string,
-  separator: string,
-  filename: string,
-  uFEFF: bool,
-  onClick: func,
-  asyncOnClick: bool,
-  enclosingCharacter: string
+	csvList: arrayOf(shape({
+		data: oneOfType([string, array, func]).isRequired,
+		headers: array,
+		separator: string,
+		enclosingCharacter: string,
+		isTranspose: bool,
+		isIndent: bool,
+		tableTitle: string
+	})).isRequired,
+	target: string,
+	filename: string,
+	uFEFF: bool,
+	onClick: func,
+	asyncOnClick: bool
 };
 
 export const defaultProps = {
-  separator: ',',
-  filename: 'generatedBy_react-csv.csv',
-  uFEFF: true,
-  asyncOnClick: false,
-  enclosingCharacter: '"'
+	csvList: {
+		enclosingCharacter: '"',
+		isTranspose: false,
+		isIndent: false,
+		tableTitle: ''
+	},
+	filename: 'generatedBy_react-csv.csv',
+	uFEFF: true,
+	asyncOnClick: false,
+	separator: ',',
+	target: '_blank'
 };
 
 export const PropsNotForwarded = [
-  `data`,
-  `headers`
+	`data`,
+	`headers`
 ];

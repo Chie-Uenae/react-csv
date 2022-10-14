@@ -1,5 +1,4 @@
 import Download from './components/Download';
-import Link from './components/Link';
-
+import ExpandedLink from './components/ExpandedLink';
 export const CSVDownload = Download;
-export const CSVLink = Link;
+export const ExpandedCSVLink = ExpandedLink;
