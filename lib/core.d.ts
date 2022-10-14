@@ -1,0 +1,13 @@
+export function isSafari(): boolean;
+export function isJsons(array: any): boolean;
+export function isArrays(array: any): boolean;
+export function jsonsHeaders(array: any): any;
+export function jsons2arrays(jsons: any, headers: any): any[];
+export function getHeaderValue(property: any, obj: any): any;
+export function elementOrEmpty(element: any): any;
+export function joiner(data: any, separator?: string, enclosingCharacter?: string, isTranspose: any, isIndent: any): any;
+export function arrays2csv(data: any, headers: any, separator: any, enclosingCharacter: any, isTranspose: any, isIndent: any): any;
+export function jsons2csv(data: any, headers: any, separator: any, enclosingCharacter: any, isTranspose: any, isIndent: any): any;
+export function string2csv(data: any, headers: any, separator: any, isTranspose: any, isIndent: any): any;
+export function toCSV(data: any, headers: any, separator: any, enclosingCharacter: any, isTranspose: any, isIndent: any, tableTitle: any): string;
+export function buildURI(csvList: any, uFEFF: any): string;
